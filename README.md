@@ -17,7 +17,7 @@ class App extends React.Component {
 ReactDOM.render(<App />, document.getElementById("app"));
 ```
 
-# Usage basic:
+# Usage with import:
 
 ### **index.js**
 
