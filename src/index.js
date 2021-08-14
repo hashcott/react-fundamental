@@ -1,13 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-// import
-class App extends React.Component {
-  // Kết thừa component
-  constructor() {} // Hàm được chạy đầu tiên
-  render() {
-    return <div className="message-box">Wellcome to ABC</div>;
-  }
-}
+
+// Import component
+import App from "./App.js";
 
 ReactDOM.render(<App />, document.getElementById("app"));
-// <h1>   {children} jsx </h1>
