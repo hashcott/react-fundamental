@@ -1,50 +1,53 @@
-# Lesson 1: Component
+# Lesson 2: Props
 
-# Usage basic:
+# Props:
 
-```
-import React from "react";
-import ReactDOM from "react-dom";
-// import
-class App extends React.Component {
-  // Kết thừa component
-  constructor() {} // Hàm được chạy đầu tiên
-  render() {
-    return <div className="message-box">Wellcome to ABC</div>;
-  }
-}
+Props (properties) là thuộc tính của componet được chuyền vào hoặc khởi tạo mặc định
 
-ReactDOM.render(<App />, document.getElementById("app"));
-```
+# Pass props to component
 
-# Usage with import:
-
-### **index.js**
-
-```
-import React from "react";
-import ReactDOM from "react-dom";
-
-// Import component
-import App from "./App.js";
-
-ReactDOM.render(<App />, document.getElementById("app"));
-```
-
-### **App.js**
+## **screens/Home.js**
 
 ```
 import React, { Component } from "react";
-
-// Export component
-export default class App extends Component {
+import Profile from "../components/Profile";
+export default class Home extends Component {
   render() {
     return (
       <div>
-        <h1>Hey girl</h1>
-        <h1>Well done</h1>
+        {/* pass value to component */}
+        <Profile name="Nguyễn Đức Hạnh" job="IT" age={20} isDisplay={true} />
+        <Profile
+          name="Nguyễn Thị Thu Uyên"
+          job="HR"
+          age={19}
+          isDisplay={false}
+        />
       </div>
     );
   }
 }
+```
+
+## **components/Profile.js**
+
+```
+import React, { Component } from "react";
+
+export default class Profile extends Component {
+  render() {
+    console.log(this.props);
+    if (this.props.isDisplay) {
+      return (
+        <div>
+          {/* Using props */}
+          <p>{this.props.name}</p>
+          <p>{this.props.job}</p>
+          <p>{this.props.age}</p>
+        </div>
+      );
+    } else {
+      return <div>Profile was hidden</div>;
+    }
+  }
 ```
