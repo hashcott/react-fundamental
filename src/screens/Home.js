@@ -6,6 +6,8 @@ export default class Home extends Component {
       <div>
         {/* pass value to component */}
         <Clock format="vi-VN" timezone="Asia/Ho_Chi_Minh" />
+        <Clock format="vi-VN" timezone="America/Chicago" />
+        <Clock format="vi-VN" timezone="America/New_York" />
       </div>
     );
   }
