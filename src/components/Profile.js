@@ -3,10 +3,10 @@ import React, { Component } from "react";
 export default class Profile extends Component {
   render() {
     console.log(this.props);
-
     if (this.props.isDisplay) {
       return (
         <div>
+          <p>This is {this.props.nameComponent}</p>
           {/* Using props */}
           <p>{this.props.name}</p>
           <p>{this.props.job}</p>
@@ -18,3 +18,7 @@ export default class Profile extends Component {
     }
   }
 }
+
+Profile.defaultProps = {
+  nameComponent: "Profile",
+};

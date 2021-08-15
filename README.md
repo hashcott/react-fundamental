@@ -51,3 +51,13 @@ export default class Profile extends Component {
     }
   }
 ```
+
+## Declaring default props
+
+### **components/Profile.js**
+
+```
+Profile.defaultProps = {
+  nameComponent: "Profile",
+};
+```
