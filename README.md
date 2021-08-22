@@ -1,3 +1,5 @@
-# Lesson 4: Component Life cycle
+# Lesson 4: Handling Events
 
-![Component Life cycle](/resources/lifecycle.jpg)
+- Một số quy tắc của events trong React:
+  - Tên của React event sẽ viết theo camelCase
+  - Với jsx thì truyền event vào trong element là 1 function
